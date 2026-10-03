@@ -32,12 +32,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # Clone protobuf repository and checkout the commit tagged v21.12
+      # Clone protobuf repository and checkout v21.12
       - name: Clone protobuf
         run: |
           git clone https://github.com/protocolbuffers/protobuf.git
           cd protobuf
-          git checkout f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+          git checkout v21.12
 
       # Build and install protobuf
       - name: Build and install protobuf

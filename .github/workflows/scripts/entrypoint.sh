@@ -41,7 +41,7 @@ $PIP_INSTALL_COMMAND "build==1.2.2.post1" "cmake==3.31.6"
 original_dir=$(pwd)
 git clone https://github.com/protocolbuffers/protobuf.git
 cd protobuf
-git checkout f0dc78d7e6e331b8c6bb2d5283e06aa26883ca7c
+git checkout v21.12
 git submodule update --init
 mkdir build_source && cd build_source
 cmake ../cmake -DCMAKE_INSTALL_PREFIX=`pwd`/installed_protobuf_lib -Dprotobuf_BUILD_SHARED_LIBS=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON -Dprotobuf_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release
